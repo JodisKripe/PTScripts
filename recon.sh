@@ -13,5 +13,5 @@ echo 'Ports:'
 $(python3 recon.py)
 echo
 echo "-----------Running Extenisive Nmap--------------"
-echo "nmap -sC -sV -T3 $(python3 recon.py) $ip | tee recon/nmap-extensive.scan"
-nmap -sC -sV -T3 $(python3 recon.py) $ip | tee recon/nmap-extensive.scan
+echo "nmap -sC -sV -T3 -p$(python3 recon.py) $ip | tee recon/nmap-extensive.scan"
+nmap -sC -sV -T3 -p$(python3 recon.py) $ip | tee recon/nmap-extensive.scan
