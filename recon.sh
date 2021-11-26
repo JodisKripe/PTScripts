@@ -10,7 +10,7 @@ echo '-----------OPEN Ports-----------'
 cat recon/openPorts.txt | grep open | cut -d "/" -f 1 | tee recon/openPorts.raw
 echo
 echo 'Ports:'
-$(python3 recon.py)
+echo $(python3 recon.py)
 echo
 echo "-----------Running Extenisive Nmap--------------"
 echo "nmap -sC -sV -T3 -p$(python3 recon.py) $ip | tee recon/nmap-extensive.scan"
